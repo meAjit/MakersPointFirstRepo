@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }
+        </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <title>makerspoint App</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+
+
+    </head>
+    <body>
+          <div id="app">
+          <navbar></navbar>
+            <div Class="container">
+             <articles></articles>
+            </div>
+            <div style="margin-left:100px">
+
+
+        <table style="width:100%">
+
+            <table border="1" width="70%;">
+          <tr>
+            <td>Work-id:</th>
+            <td>
+              <div contenteditable></div>
+            </th>
+        </tr>
+            <td width="20%">Title</td>
+            <td width="50%">
+              <div contenteditable></div>
+            </td>
+
+        <tr>
+            <td>Provider</td>
+            <td>
+           <button type="button" onclick=>yes</button>
+           <button type="button" onclick=>No</button>
+           </td>
+
+        <tr>
+            <td>Customer</td>
+            <td>
+            <select name="Customer" id="customer">
+              <option value="Customer number">Customer Number</option>
+              <option value="Name">Name</option>
+              <option value="Business ID">Business ID</option>
+              <option value="Email">Email</option>
+              <option value="Phone Number">Phone Number</option>
+             </td>
+
+        <tr>
+            <td>Orderdate</td>
+            <td>
+         <input type="date" name="orderdate">
+          </form>
+            </td>
+
+        <tr>
+            <td>Deadline</td>
+             <td>
+              <input type="date" name="orderdate">
+               <input type="submit">
+               </form>
+             </td>
+
+        <tr>
+            <td>Absoulte deadline</td>
+            <td>
+
+             <input type="date" name="orderdate">
+              <input type="submit">
+              </form>
+            </td>
+
+        <tr>
+            <td>Additional info:</td>
+
+            <td>
+              <div contenteditable>Add more information:
+              </div>
+            </td>
+
+        <tr>
+            <td>No Material</td>
+            <td>
+             <input type="radio" name="" value=""><br>
+            </td>
+
+            <tr>
+                <td>Add Material</td>
+                <td>
+               <input type="radio" name="" value="">&nbsp;<br>
+                </td>
+            <tr>
+
+        <tr>
+            <td>Wetransfer</td>
+             <td>
+              <input type="radio" name="Link here" value="">&nbsp;Link here<br>
+             </td>
+
+        <tr>
+            <td>Existing Material</td>
+            <td>
+              <input type="radio" name="" value="">&nbsp;<br>
+            </td>
+
+        <tr>
+        <th rowspan="5">Deliver By:</th>
+
+        <td>
+          <table>
+          <div class="control">
+      <tr>
+        <td>
+          <label class="radio">
+     <input type="radio" name="Customer retrivesMailMatkahuoltoOther">
+     Customer retrives<br>
+   </label>
+       </td>
+     </tr>
+
+     <tr>
+     </td>
+   <label class="radio">
+     <input type="radio" name="Customer retrivesMailMatkahuoltoOther" checked>
+     Mail<br>
+   </label>
+ </td>
+</tr>
+
+<tr>
+<td>
+   <label>
+
+     <input type="radio" name="Customer retrivesMailMatkahuoltoOther">
+     Matkahuolto<br>
+
+
+   </label>
+
+ </td>
+</tr>
+<tr>
+  <td>
+   <label class="radio">
+     <input type="radio" name="Customer retrivesMailMatkahuoltoOther" checked>
+     Other<br>
+   </label>
+ </td>
+</tr>
+ </div>
+</table>
+
+
+          </td<
+
+
+        </tr>
+
+        </table>
+           </div>
+         </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+    </body>
+</html>

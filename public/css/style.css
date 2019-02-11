@@ -1,0 +1,41 @@
+html, body { 
+	background-color: #f7f7f9;
+}
+
+.container-fluid, .container {
+	margin-top: -24px;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: auto;
+ }
+
+.search-btn {
+	color: orange;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.header-link {
+	color: #473f39;
+	text-transform: uppercase;
+	border-bottom: none;
+}
+
+.header-link:hover {
+	color: orange;
+	text-decoration: none;
+}
+
+.align-text-bottom {
+	position: fixed;     
+    text-align: center;    
+    bottom: 0px; 
+    width: 100%;
+   }
