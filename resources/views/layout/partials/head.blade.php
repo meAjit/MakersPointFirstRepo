@@ -18,7 +18,9 @@
 <link rel="stylesheet" href="css\bootstrap-grid.css" crossorigin="anonymous">
 <link rel="stylesheet" href="css\style.css" crossorigin="anonymous">
 <link href="{{asset('css/makeWorkOrder.css')}}" rel="stylesheet" />
-
+<link href="{{asset('css/workOrder.css')}}" rel="stylesheet" />
+<link href="{{asset('css/dropdown.css')}}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 

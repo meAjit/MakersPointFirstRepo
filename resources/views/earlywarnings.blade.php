@@ -2,11 +2,48 @@
 
 @section('content')
 
-       <div class="row">
-         <h1>This is early warnings</h1>
-
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas dolor vulputate quam convallis consequat. Quisque eu lorem eget magna lacinia suscipit. Maecenas condimentum vehicula eros. Fusce massa lacus, blandit et leo sed, accumsan commodo sem. Sed eget pulvinar tellus. Praesent ex diam, sodales at consequat id, viverra ut dolor. In eget orci sit amet magna sagittis mattis sit amet sed augue. Vivamus facilisis libero ligula, vel sodales ipsum sollicitudin id. Duis vitae urna rutrum, dignissim arcu ac, elementum augue. Quisque id interdum ligula. Donec tincidunt feugiat massa sed aliquam. Duis eu vehicula turpis.</p>
-
-		</div>
-
+       <table class ="WO">
+           <col width="25">
+           <col width="200">
+           <col width="1">
+           <col width="0.5">
+           
+  <tr>
+    <th>WORK ID:</th>
+    <th>Title</th> 
+    <th>info</th> 
+    <th>??</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>
+        <div class="dropdown"><button class="dropbtn" >
+      <i class="fa fa-caret-down"></i>
+    </button>
+      <div class="dropdown-content">
+      <a href="#">Subcontractor</a>
+      <a href="#">material info here</a>
+     
+    </div>
+        </div>
+      </td>
+    <td></td>
+  </tr>
+           <tr>
+        <td></td>
+    <td></td>
+    <td>
+        <div class="dropdown"><button class="dropbtn" >
+      <i class="fa fa-caret-down"></i>
+    </button>
+      <div class="dropdown-content">
+      <a href="#">Subcontractor</a>
+      <a href="#">material info here</a>
+     
+    </div>
+        </div>
+      </td>
+    <td></td>
+  </tr>
 @endsection

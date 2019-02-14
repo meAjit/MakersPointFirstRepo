@@ -18,11 +18,12 @@
     <td contenteditable="true"></td>
   </tr>
     <tr>
-    <th>Provider</th>
-    <td contenteditable="true" ><input class="radio" type="radio" name="Y/N" value="Yes">  Yes <!--name of the radio button defines slection -->
-         <input class="radio" type="radio" name="Y/N" value="No"> No
-     
-        </td>
+    <th rowspan="2">Provider</th>
+    <td  ><input class="radio" type="radio" name="Y/N" value="Yes" contenteditable="false">Yes
+         <input  class="radio" type="radio" name="Y/N" value="No" contenteditable="false"> No 
+      <tr> <td > <span margin-left= "5px" contenteditable="false">Provider Name:</span>
+          <span contenteditable="true"></span></td>
+        </tr>
         
   </tr>
   <tr>
@@ -38,8 +39,12 @@
     <td> <input class="date" type="date" name="orderdate"></td>
   </tr>
     <tr>
-    <th>Absolute deadline</th>
-    <td ><input class="date" type="date" name="orderdate"></td>
+    <th rowspan="2">Absolute deadline</th>
+    <td ><input class="date" type="date" name="orderdate">
+        <tr>
+        <td ><span contenteditable="false">Reason for absolute deadline:</span>
+            <span contenteditable="true"></span></td>
+        </tr>
   </tr>
   <tr>
     <th >Additional info:</th>
