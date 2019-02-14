@@ -2,90 +2,13 @@
 
 @section('content')
 
-       <!DOCTYPE html>
-<html >
-<head>
-    
-<style>
-    
-    .backGround{        
-        
-        background: #E7E2D2;
-        background-clip: content-box;
-        
-    }
-    
-table, th, td {
-  
-  border: 2px solid #6F6F6F;
-  border-collapse: collapse;
-}
-th {
-  
-  width:11%;
-  padding: 5px;
-  text-align: left;
-  font-weight:500;
-  
-}
-    td {
-  width:50% ;
-  padding: 5px;
-  text-align: left;    
-  
-}
-    
+       
 
-    
-    .tableWidth {
-     
-    width:60%; 
-    margin-left:20%; 
-    margin-right:15%;
-  }
-    .date {
-     padding-left:5px;
-     margin-left: 5px;
-     width: 30%; 
-     background-color:azure;
-     box-shadow:5px 3px #888888;
-     box-sizing: border-box;
-     font-family: sans-serif;
-     font-weight:500;
-
-        
-}
-    .button {
-        border: 2px solid #444444;
-        border-radius: 7px;
-        margin-left:20%;
-        padding:5px;
-        margin-top: 10px;
-        box-shadow:5px 3px #888888;
-        background-color:#E3EFBE;
-        font-family: sans-serif;
-        font-weight: bold;
-
-    }
-    
-    .radio{
-        border: 2px solid #444444;
-        margin-left: 5px;
-        background-color:azure;
-        box-sizing: border-box;
-        font-family: sans-serif;
-        font-weight:500;
-    }
-    
-</style>
-</head>
-
-<body class="backGround">
 
     
 
 
-<table class ="tableWidth" >
+<table class ="MWO" >
   <tr>
     <th>Work-id:</th>
     <td contenteditable="true"></td>
@@ -159,9 +82,9 @@ th {
     <button class="button" type="submit" value="Submit">Submit</button>  
     
 
-</body>
 
-</html>
+
+
 
 		
 @endsection
