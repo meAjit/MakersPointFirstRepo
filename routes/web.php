@@ -30,8 +30,14 @@ Route::get('/machinetime', function () {
     return view('machinetime');
 });
 
-Route::get('/reports', function () {
-    return view('reports');
+Route::get('/subTask', function () {
+    return view('subTask');
+});
+Route::get('/machineReport', function () {
+    return view('machineReport');
+});
+Route::get('/materials', function () {
+    return view('materials');
 });
 
 

@@ -60,7 +60,9 @@
   </tr>
     <tr>
     <th>Wetransfer</th>
-    <td contenteditable="true"><input class="radio"  type="radio" name="N/Y" value=""></td>
+    <td > <span contenteditable="false"><input class="radio"  type="radio" name="N/Y" value=""></span>
+         <span contenteditable="true"> link here</span>
+        </td>
   </tr>
   <tr>
     <th >Existing material</th>
