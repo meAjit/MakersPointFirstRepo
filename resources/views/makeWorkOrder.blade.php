@@ -82,22 +82,33 @@ th {
 
 <body class="backGround">
 
-    
+<form action="store" method="post" >
+<table class ="tableWidth"  >
+    <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
-
-<table class ="tableWidth" >
   <tr>
+   <th><label for="">Work-Id</label></th>
+   <td> <input type="text" name="workid" id="workid"></td>
+<!--
     <th>Work-id:</th>
-    <td contenteditable="true"></td>
+   
+    contenteditable="true" name="workid" id="workid">
+      <td input type="text" contenteditable="true" name="workid" id="workid">
+
+ </td>    z
+-->
+<!-- name=workid added-->
   </tr>
+ 
   <tr>
-    <th >Title:</th>
-    <td contenteditable="true"></td>
+    <th> <label for="">Title:</label> </th>
+    <td> <input type="text" contenteditable="true" name="title" id="title"></td><!--   name=title added-->
   </tr>
     <tr>
     <th>Provider</th>
-    <td contenteditable="true" ><input class="radio" type="radio" name="Y/N" value="Yes">  Yes <!--name of the radio button defines slection -->
-         <input class="radio" type="radio" name="Y/N" value="No"> No
+    <td contenteditable="true" ><input class="radio" type="radio" name="provider" value="Yes">  Yes <!--   name=provider added-->
+        <!--name of the radio button defines slection -->
+         <input class="radio" type="radio" name="provider" value="No"> No
      
         </td>
         
@@ -108,57 +119,62 @@ th {
   </tr>
     <tr>
     <th>Order date</th>
-    <td ><input class="date" type="date" name="orderdate"></td>
+  <td ><input class="date" type="date" name="orderdate"></td> 
   </tr>
   <tr>
     <th >Deadline</th>
-    <td> <input class="date" type="date" name="orderdate"></td>
+    <td> <input class="date" type="date" name="deadline"></td><!--  name was orderdate before and should be deadline-->
   </tr>
     <tr>
     <th>Absolute deadline</th>
-    <td ><input class="date" type="date" name="orderdate"></td>
+    <td ><input class="date" type="date" name="absolutedeadline"></td><!--  name was orderdate before and should be absolute deadline-->
   </tr>
   <tr>
     <th >Additional info:</th>
-    <td contenteditable="true"></td>
+     <td> <input type="text" contenteditable="true" name="additionalinfo" id="additionalinfo"></td>
   </tr>
     <tr>
     <th>No material</th>
-    <td ><input class="radio" type="radio" name="N/Y" value=""></td>
+    <td ><input class="radio" type="radio" name="nomaterial" value="nomaterial"></td>
+    
+<!--   // <td><input class="radio" type="radio" name="addmaterial" value="addmaterial">Add Material</td>-->
+    
   </tr>
+    
+  
   <tr>
     <th >Add material</th>
-    <td><input class="radio" type="radio" name="N/Y" value=""></td>
+    <td><input class="radio" type="radio" name="addmaterial" value="addmaterial"></td>
   </tr>
     <tr>
     <th>Wetransfer</th>
-    <td contenteditable="true"><input class="radio"  type="radio" name="N/Y" value=""></td>
+    <td contenteditable="true"><input class="radio"  type="radio" name="wetransfer" value="wetransfer"></td>
   </tr>
   <tr>
     <th >Existing material</th>
-    <td><input class="radio" type="radio" name="N/Y" value=""></td>
+    <td><input class="radio" type="radio" name="existingmaterial" value="existingmaterial"></td>
   </tr>
     <tr>
     <th rowspan ="4">Delivery by:</th>
-    <td><input class="radio" type="radio" name="y/n" value=""> Customer retrives</td>
+    <td><input class="radio" type="radio" name="customerretrives" value="customerretrives"> Customer retrives</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="y/n" value=""> Mail:</td>
+    <td><input class="radio" type="radio" name="mail" value="mail"> Mail:</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="y/n" value=""> Matkahuolto</td>
+    <td><input class="radio" type="radio" name="matkahuolto" value="matkahuolto"> Matkahuolto</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="y/n" value=""> Other</td>
+    <td><input class="radio" type="radio" name="other" value="other"> Other</td>
   </tr>
 
 </table>
     <button class="button" type="submit" value="Submit">Submit</button>  
     
-
+</form>
 </body>
 
 </html>
