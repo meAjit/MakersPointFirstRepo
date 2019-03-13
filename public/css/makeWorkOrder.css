@@ -61,7 +61,7 @@ table.MWO th {
         padding:5px;
         margin-top: 10px;
         box-shadow:5px 3px #888888;
-        background-color:#E3EFBE;
+        background-color: orange;
         font-family: sans-serif;
         font-weight: bold;
 
@@ -76,6 +76,5 @@ table.MWO th {
         font-weight:500;
     }
     
-</style>
 
 
