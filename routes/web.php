@@ -29,6 +29,9 @@ Route::get('/workorders', 'Makeworkorder_controller@showall');
 //    return view('workorders');
 //});
 
+Route::get('/workDetail', function () {
+    return view('/workDetail');
+});
 
 Route::get('/earlywarnings', function () {
     return view('earlywarnings');
@@ -38,8 +41,14 @@ Route::get('/machinetime', function () {
     return view('machinetime');
 });
 
-Route::get('/reports', function () {
-    return view('reports');
+Route::get('/subTask', function () {
+    return view('subTask');
+});
+Route::get('/machineReport', function () {
+    return view('machineReport');
+});
+Route::get('/materials', function () {
+    return view('materials');
 });
 
 

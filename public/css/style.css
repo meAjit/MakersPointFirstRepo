@@ -33,9 +33,12 @@ html, body {
 	text-decoration: none;
 }
 
-.align-text-bottom {
-	position: fixed;     
-    text-align: center;    
-    bottom: 0px; 
-    width: 100%;
-   }
+.current-header-link {
+	color: orange;
+}
+
+.align-text-bottom { 
+	position: fixed !important;     
+    text-align: center !important;    
+    bottom: 0px !important; 
+    width: 100% !important;

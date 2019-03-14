@@ -9,3 +9,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	function highlightCurrent() {
+        const curPage = document.URL;
+        const links = document.getElementsByTagName('a');
+        for (let link of links) {
+        	if (link.href == curPage) {
+             link.classList.add("current-header-link");
+           	}
+        }
+    }
+    document.onreadystatechange = () => {
+        if (document.readyState === 'complete') {
+        	highlightCurrent()
+        }
+    };
+</script> 

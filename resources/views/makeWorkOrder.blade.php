@@ -2,115 +2,31 @@
 
 @section('content')
 
-       <!DOCTYPE html>
-<html >
-<head>
-    
-<style>
-    
-    .backGround{        
-        
-        background: #E7E2D2;
-        background-clip: content-box;
-        
-    }
-    
-table, th, td {
-  
-  border: 2px solid #6F6F6F;
-  border-collapse: collapse;
-}
-th {
-  
-  width:11%;
-  padding: 5px;
-  text-align: left;
-  font-weight:500;
-  
-}
-    td {
-  width:50% ;
-  padding: 5px;
-  text-align: left;    
-  
-}
-    
+       
+
 
     
-    .tableWidth {
-     
-    width:60%; 
-    margin-left:20%; 
-    margin-right:15%;
-  }
-    .date {
-     padding-left:5px;
-     margin-left: 5px;
-     width: 30%; 
-     background-color:azure;
-     box-shadow:5px 3px #888888;
-     box-sizing: border-box;
-     font-family: sans-serif;
-     font-weight:500;
 
-        
-}
-    .button {
-        border: 2px solid #444444;
-        border-radius: 7px;
-        margin-left:20%;
-        padding:5px;
-        margin-top: 10px;
-        box-shadow:5px 3px #888888;
-        background-color:#E3EFBE;
-        font-family: sans-serif;
-        font-weight: bold;
-
-    }
-    
-    .radio{
-        border: 2px solid #444444;
-        margin-left: 5px;
-        background-color:azure;
-        box-sizing: border-box;
-        font-family: sans-serif;
-        font-weight:500;
-    }
-    
-</style>
-</head>
-
-<body class="backGround">
 
 <form action="store" method="post" >
-<table class ="tableWidth"  >
+
+<table class ="MWO" >
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
-
   <tr>
-   <th><label for="">Work-Id</label></th>
-   <td> <input type="text" name="workid" id="workid"></td>
-<!--
     <th>Work-id:</th>
-   
-    contenteditable="true" name="workid" id="workid">
-      <td input type="text" contenteditable="true" name="workid" id="workid">
-
- </td>    z
--->
-<!-- name=workid added-->
+    <td> <input type="text" name="workid" id="workid"></td>
   </tr>
- 
   <tr>
-    <th> <label for="">Title:</label> </th>
-    <td> <input type="text" contenteditable="true" name="title" id="title"></td><!--   name=title added-->
+    <th >Title:</th>
+    <td> <input type="text" name="title" id="title"> </td>
   </tr>
     <tr>
-    <th>Provider</th>
-    <td contenteditable="true" ><input class="radio" type="radio" name="provider" value="Yes">  Yes <!--   name=provider added-->
-        <!--name of the radio button defines slection -->
-         <input class="radio" type="radio" name="provider" value="No"> No
-     
-        </td>
+    <th rowspan="2">Provider</th>
+    <td  ><input class="radio" type="radio" name="provider" value="Yes" contenteditable="false">Yes
+         <input  class="radio" type="radio" name="provider" value="No" contenteditable="false"> No 
+      <tr> <td > <span margin-left= "5px" contenteditable="false">Provider Name:</span>
+          <span> <input type="text" name="provider" id="provider"></span></td>
+        </tr>
         
   </tr>
   <tr>
@@ -119,65 +35,66 @@ th {
   </tr>
     <tr>
     <th>Order date</th>
-  <td ><input class="date" type="date" name="orderdate"></td> 
+    <td ><input class="date" type="date" name="orderdate"></td>
   </tr>
   <tr>
     <th >Deadline</th>
-    <td> <input class="date" type="date" name="deadline"></td><!--  name was orderdate before and should be deadline-->
+    <td> <input class="date" type="date" name="deadline"></td>
   </tr>
     <tr>
-    <th>Absolute deadline</th>
-    <td ><input class="date" type="date" name="absolutedeadline"></td><!--  name was orderdate before and should be absolute deadline-->
+    <th rowspan="2">Absolute deadline</th>
+    <td ><input class="date" type="date" name="absolutedeadline">
+        <tr>
+        <td ><span contenteditable="false">Reason for absolute deadline:</span>
+            <span contenteditable="true"></span></td>
+        </tr>
   </tr>
   <tr>
     <th >Additional info:</th>
-     <td> <input type="text" contenteditable="true" name="additionalinfo" id="additionalinfo"></td>
+    <td><input type="text" contenteditable="true" name="additionalinfo" id="additionalinfo"></td>
   </tr>
     <tr>
     <th>No material</th>
-    <td ><input class="radio" type="radio" name="nomaterial" value="nomaterial"></td>
-    
-<!--   // <td><input class="radio" type="radio" name="addmaterial" value="addmaterial">Add Material</td>-->
-    
+    <td ><input class="radio" type="radio" name="material" value=""></td>
   </tr>
-    
-  
   <tr>
     <th >Add material</th>
-    <td><input class="radio" type="radio" name="addmaterial" value="addmaterial"></td>
+    <td><input class="radio" type="radio" name="material" value=""></td>
   </tr>
     <tr>
     <th>Wetransfer</th>
-    <td contenteditable="true"><input class="radio"  type="radio" name="wetransfer" value="wetransfer"></td>
+    <td > <span contenteditable="false"><input class="radio"  type="radio" name="material" value=""></span>
+         <span contenteditable="true"> link here</span>
+        </td>
   </tr>
   <tr>
     <th >Existing material</th>
-    <td><input class="radio" type="radio" name="existingmaterial" value="existingmaterial"></td>
+    <td><input class="radio" type="radio" name="material" value=""></td>
   </tr>
     <tr>
     <th rowspan ="4">Delivery by:</th>
-    <td><input class="radio" type="radio" name="customerretrives" value="customerretrives"> Customer retrives</td>
+    <td><input class="radio" type="radio" name="delivery" value=""> Customer retrives</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="mail" value="mail"> Mail:</td>
+    <td><input class="radio" type="radio" name="delivery" value=""> Mail:</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="matkahuolto" value="matkahuolto"> Matkahuolto</td>
+    <td><input class="radio" type="radio" name="delivery" value=""> Matkahuolto</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="other" value="other"> Other</td>
+    <td><input class="radio" type="radio" name="delivery" value=""> Other</td>
   </tr>
 
 </table>
     <button class="button" type="submit" value="Submit">Submit</button>  
-    
 </form>
-</body>
 
-</html>
+
+
+
 
 		
 @endsection
