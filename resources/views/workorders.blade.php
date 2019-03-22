@@ -18,20 +18,24 @@
   </tr>
            
            @foreach($user as $users)
+           @if($users->material != 'No material')
+            
   <tr>
       
     <td>{{$users->workid}}</td>
     <td><a href="/workDetail" class="header-link">{{$users->title}}</a></td>
    <td>
-        <div class="dropdown"><button class="dropbtn" >
-      <i class="fa fa-caret-down"></i>
-    </button>
+        
+    <select>
       <div class="dropdown-content">
-      <a href="#">Not processing</a>
-      <a href="#">Processing</a>
-      <a href="#">Ready</a>
+      <option id="Not processing" >Not processing</option>
+      <option id="processing" >processing</option>
+      <option id="ready" >ready</option>
+
+          
     </div>
-        </div></td>
+        </select>
+       </td>
     <td>
         <div class="dropdown"><button class="dropbtn" >
       <i class="fa fa-caret-down"></i>
@@ -45,7 +49,10 @@
       </td>
     <td></td>
   </tr> 
-
+           
+    @endif      
+               
+              
 @endforeach
            
   

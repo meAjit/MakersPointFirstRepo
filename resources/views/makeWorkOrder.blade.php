@@ -55,44 +55,53 @@
   </tr>
     <tr>
     <th>No material</th>
-    <td ><input class="radio" type="radio" name="material" value=""></td>
+    <td ><input class="radio" type="radio" name="material" value="No material"></td>
   </tr>
   <tr>
     <th >Add material</th>
-    <td><input class="radio" type="radio" name="material" value=""></td>
+    <td><input class="radio" type="radio" name="material" value="Add material"></td>
   </tr>
     <tr>
     <th>Wetransfer</th>
-    <td > <span contenteditable="false"><input class="radio"  type="radio" name="material" value=""></span>
+    <td > <span contenteditable="false"><input class="radio"  type="radio" name="material" value="Wetransfer"></span>
          <span contenteditable="true"> link here</span>
         </td>
   </tr>
   <tr>
     <th >Existing material</th>
-    <td><input class="radio" type="radio" name="material" value=""></td>
+    <td><input class="radio" type="radio" name="material" value="Existing material"></td>
   </tr>
     <tr>
     <th rowspan ="4">Delivery by:</th>
-    <td><input class="radio" type="radio" name="delivery" value=""> Customer retrives</td>
+    <td><input class="radio" type="radio" name="deliveryby" value="Customer retrives"> Customer retrives</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="delivery" value=""> Mail:</td>
+    <td><input class="radio" type="radio" name="deliveryby" value="Mail"> Mail:</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="delivery" value=""> Matkahuolto</td>
+    <td><input class="radio" type="radio" name="deliveryby" value="Matkahuolto"> Matkahuolto</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="delivery" value=""> Other</td>
+    <td><input class="radio" type="radio" name="deliveryby" value="Other"> Other</td>
   </tr>
 
 </table>
     <button class="button" type="submit" value="Submit">Submit</button>  
 </form>
 
+@if($errors->any())
+    <div>
+        <ul>
+            @foreach($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
 
+    </div>
+@endif
 
 
 

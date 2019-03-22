@@ -20,10 +20,16 @@ class Makeworkorder_controller extends Controller
     {
         $Makeworkorders=Makeworkorder_model::orderBy('workid','title');
 //        echo'<pre>';print_r($Makeworkorders);die;
-        
+                 
         return view('workorders',['Makeworkorders'=>$Makeworkorders]);
+        
+        
+          return view('earlywarnings',['Makeworkorders'=>$Makeworkorders]);
+        
     }
 
+    
+   
     /**
      * Show the form for creating a new resource.
      *
@@ -42,6 +48,20 @@ class Makeworkorder_controller extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'workid' => 'required',
+            'title' => 'required',
+            'provider' => '',
+            'customer' => '',
+            'orderdate' => 'required',
+            'deadline' => 'required',
+            'absolutedeadline' => '',
+            'additionalinfo' => '',
+            'material' => '',
+            'delivery' => ''
+            
+            ]);
+        
         $user=new Makeworkorder_model();
         $user->workid=Input::get("workid");
         $user->title=Input::get("title");
@@ -51,13 +71,11 @@ class Makeworkorder_controller extends Controller
         $user->deadline=Input::get("deadline");
         $user->absolutedeadline=Input::get("absolutedeadline");
         $user->additionalinfo=Input::get("additionalinfo");
-        $user->nomaterial=Input::get("nomaterial");
-        $user->addmaterial=Input::get("addmaterial");
-        $user->wetransfer=Input::get("wetransfer");
-        $user->existingmaterial=Input::get("existingmaterial");
+        $user->material=Input::get("material");
         $user->deliveryby=Input::get("deliveryby");
     $user->save();
-        return ("saved in database");
+        
+        return redirect('workorders');
 }
 
     /**
@@ -66,11 +84,21 @@ class Makeworkorder_controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function showall()
+    public function workOrders()
     {
         $user=MakeWorkOrder_model::all();
         return view("workorders",compact('user'));
+        
     }
+    
+    public function earlyWarnings()
+    {
+        $user=MakeWorkOrder_model::all();
+        return view("earlywarnings",compact('user'));
+        
+    }
+    
+    
 
     /**
      * Show the form for editing the specified resource.

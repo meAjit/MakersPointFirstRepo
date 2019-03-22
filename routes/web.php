@@ -23,7 +23,7 @@ Route::get('/makeWorkOrder', function () {
     return view('makeWorkOrder');
 });
 
-Route::get('/workorders', 'Makeworkorder_controller@showall');
+Route::get('/workorders', 'Makeworkorder_controller@workOrders');
 
 //Route::get('/workorders', function () {
 //    return view('workorders');
@@ -33,9 +33,8 @@ Route::get('/workDetail', function () {
     return view('/workDetail');
 });
 
-Route::get('/earlywarnings', function () {
-    return view('earlywarnings');
-});
+Route::get('/earlywarnings',  'Makeworkorder_controller@earlyWarnings');
+
 
 Route::get('/machinetime', function () {
     return view('machinetime');
