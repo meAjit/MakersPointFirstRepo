@@ -5,7 +5,7 @@
 
   
 
-		<p class="align-text-bottom">Turku University of Applied Sciences</p>
+		
 
 
 

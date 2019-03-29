@@ -10,6 +10,10 @@
 |
 */
 Route::get('/', function () {
+    return view('login');
+});
+
+Route::get('/home', function () {
     return view('home');
 });
 
@@ -43,6 +47,14 @@ Route::get('/materials', function () {
 
 Route::get('/control', function () {
     return view('control');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/profile-edit', function () {
+    return view('profile-edit');
 });
 
 

@@ -23,14 +23,14 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th scope="col"><a href="/" class="header-link">Home</a></th>		
+							<th scope="col"><a href="/home" class="header-link">Home</a></th>		
 							<th scope="col"><a href="/makeWorkOrder" class="header-link">Make work order</a></th>
 							<th scope="col"><a href="/workorders" class="header-link">Work orders</a></th>
 							<th scope="col"><a href="/earlywarnings" class="header-link">Early warnings</a></th>
 							<th scope="col"><a href="/machinetime" class="header-link">Machine time</a></th>
 							<th scope="col"><a class="header-link">
                                 <div class="dropdown">
-                                   <button class="dropbtn"><span class="header-link" >Reports </span>
+                                   <button class="dropbtn header-link"><span class="header-link" >Reports </span>
                                      <i class="fa fa-caret-down"></i>
                                    </button>
                                    <div class="dropdown-content">
@@ -44,7 +44,6 @@
 					</thead>
 				</table>
 			</div>
-		<div class="col-md-1"></div>	
 	</div>
 </div>
 <!-- Div that is included in every page 1/2 -->
