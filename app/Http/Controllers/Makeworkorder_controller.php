@@ -75,7 +75,8 @@ class Makeworkorder_controller extends Controller
         $user->deliveryby=Input::get("deliveryby");
     $user->save();
         
-        return redirect('workorders');
+        
+        return redirect('workorders')->with('success','Task added successfully!');
 }
 
     /**
@@ -108,7 +109,8 @@ class Makeworkorder_controller extends Controller
      */
     public function edit($id)
     {
-        //
+        $user=Makeworkorder_model::find($id);
+        return view('editdetails')->with('Makeworkorder_model', $user);
     }
 
     /**
@@ -120,7 +122,35 @@ class Makeworkorder_controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'workid' => 'required',
+            'title' => 'required',
+            'provider' => '',
+            'customer' => '',
+            'orderdate' => 'required',
+            'deadline' => 'required',
+            'absolutedeadline' => '',
+            'additionalinfo' => '',
+            'material' => '',
+            'delivery' => ''
+            
+            ]);
+        
+        $user=Makeworkorder_model::find($id);
+        $user->workid=Input::get("workid");
+        $user->title=Input::get("title");
+        $user->provider=Input::get("provider");
+        $user->customer=Input::get("customer");
+        $user->orderdate=Input::get("orderdate");
+        $user->deadline=Input::get("deadline");
+        $user->absolutedeadline=Input::get("absolutedeadline");
+        $user->additionalinfo=Input::get("additionalinfo");
+        $user->material=Input::get("material");
+        $user->deliveryby=Input::get("deliveryby");
+    $user->save();
+        
+        
+        return redirect('workorders')->with('success','Task updated successfully!');
     }
 
     /**

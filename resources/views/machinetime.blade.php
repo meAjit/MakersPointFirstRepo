@@ -1,6 +1,7 @@
 @extends('layout.mainlayout')
 
 @section('content')
+
         <table class ="WO">
            <col width="80">
            <col width="25">

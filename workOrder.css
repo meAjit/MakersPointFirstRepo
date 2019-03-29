@@ -1,0 +1,58 @@
+<style>
+    
+    .backGround{        
+        
+        
+        background-clip:content-box;
+     
+        
+    }
+    /*WO refers work orders*/
+table.WO {
+  background: #DEDEDE;
+  width:80%; 
+  margin-left:10%; 
+  margin-right:15%;
+  border: 2px solid #6F6F6F;
+  border-collapse: collapse;
+}
+table.WO th {
+    
+  border: 2px solid #6F6F6F;
+  border-collapse: collapse;
+  width:11%;
+  padding: 5px;
+  text-align: left;
+  font-weight:500;
+  
+}
+  table.WO  td {
+  margin-left: 5px;
+  border: 2px solid #6F6F6F;
+  border-collapse: collapse;
+  width:50% ;
+  padding: 5px;
+  text-align: left;    
+  
+}
+    
+
+    
+    
+    .date {
+     padding-left:5px;
+     margin-left: 5px;
+     width: 30%; 
+     background-color:azure;
+     box-shadow:5px 3px #888888;
+     box-sizing: border-box;
+     font-family: sans-serif;
+     font-weight:500;
+
+        
+}
+   
+    
+</style>
+
+

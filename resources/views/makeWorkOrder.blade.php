@@ -5,14 +5,13 @@
        
 
 
-    
-
 
 <form action="store" method="post" >
 
 <table class ="MWO" >
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
-  <tr>
+    
+   <tr>
     <th>Work-id:</th>
     <td> <input type="text" name="workid" id="workid"></td>
   </tr>
@@ -25,7 +24,7 @@
     <td  ><input class="radio" type="radio" name="provider" value="Yes" contenteditable="false">Yes
          <input  class="radio" type="radio" name="provider" value="No" contenteditable="false"> No 
       <tr> <td > <span margin-left= "5px" contenteditable="false">Provider Name:</span>
-          <span> <input type="text" name="provider" id="provider"></span></td>
+          <span>  <input type="text" name="provider" id="provider"></span></td>
         </tr>
         
   </tr>
@@ -73,24 +72,26 @@
   </tr>
     <tr>
     <th rowspan ="4">Delivery by:</th>
-    <td><input class="radio" type="radio" name="deliveryby" value="Customer retrives"> Customer retrives</td>
+    <td><input class="radio" type="radio" name="delivery" value="Customer retrives"> Customer retrives</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="deliveryby" value="Mail"> Mail:</td>
+    <td><input class="radio" type="radio" name="delivery" value="Mail"> Mail:</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="deliveryby" value="Matkahuolto"> Matkahuolto</td>
+    <td><input class="radio" type="radio" name="delivery" value="Matkahuolto"> Matkahuolto</td>
     </tr>
     
     <tr>
-    <td><input class="radio" type="radio" name="deliveryby" value="Other"> Other</td>
+    <td><input class="radio" type="radio" name="delivery" value="Other"> Other</td>
   </tr>
 
 </table>
     <button class="button" type="submit" value="Submit">Submit</button>  
 </form>
+
+
 
 @if($errors->any())
     <div>
@@ -102,6 +103,7 @@
 
     </div>
 @endif
+
 
 
 

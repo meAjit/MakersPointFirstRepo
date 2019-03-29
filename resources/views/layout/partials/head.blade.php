@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="css\bootstrap-reboot.css" crossorigin="anonymous">
 <link rel="stylesheet" href="css\bootstrap-grid.css" crossorigin="anonymous">
 
-<link href="{{asset('css/style.css')}}" rel="stylesheet" />
+
+<link rel="stylesheet" href="css\style.css" crossorigin="anonymous">
 <link href="{{asset('css/makeWorkOrder.css')}}" rel="stylesheet" />
 <link href="{{asset('css/workOrder.css')}}" rel="stylesheet" />
 <link href="{{asset('css/dropdown.css')}}" rel="stylesheet" />

@@ -20,9 +20,14 @@
            	}
         }
     }
+
     document.onreadystatechange = () => {
         if (document.readyState === 'complete') {
         	highlightCurrent()
         }
     };
+
 </script> 
+
+
+

@@ -16,14 +16,15 @@
     <th>info</th> 
     <th>??</th>
   </tr>
+
            
-           @foreach($user as $users)
-           @if($users->material == 'No material')
+           @foreach($workorder as $workorder)
+           @if($workorder->material == 'No material')
             
   <tr>
       
-    <td>{{$users->workid}}</td>
-    <td><a href="/workDetail" class="header-link">{{$users->title}}</a></td>
+    <td>{{$workorder->workid}}</td>
+    <td><a href="/workDetail" class="header-link">{{$workorder->title}}</a></td>
    <td>
         
     <select>
@@ -41,18 +42,16 @@
       <i class="fa fa-caret-down"></i>
     </button>
       <div class="dropdown-content">
-      <a href="#">Subcontractor</a>
-      <a href="#">material info here</a>
+      <a href="#">{{$workorder->provider}}</a>
+      <a href="#">{{$workorder->material}}</a>
      
     </div>
         </div>
       </td>
     <td></td>
   </tr> 
-           
-    @endif      
-               
-              
+           @endif
+
 @endforeach
            
   

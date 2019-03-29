@@ -9,21 +9,23 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Makeworkorder_model;
+use App\Workorder;
 use Illuminate\Http\Requests;
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('makeworkorder', 'Makeworkorder_controller@makeworkorder');
-Route::post('store', 'Makeworkorder_controller@store');
+Route::get('makeworkorder', 'workorder_controller@makeworkorder');
+//Route::get('editdetails', 'Makeworkorder_controller@edit');
+Route::post('store', 'workorder_controller@store');
+
 
 Route::get('/makeWorkOrder', function () {
     return view('makeWorkOrder');
 });
 
-Route::get('/workorders', 'Makeworkorder_controller@workOrders');
+Route::get('/workorders', 'workorder_controller@workorders');
 
 //Route::get('/workorders', function () {
 //    return view('workorders');
@@ -33,7 +35,7 @@ Route::get('/workDetail', function () {
     return view('/workDetail');
 });
 
-Route::get('/earlywarnings',  'Makeworkorder_controller@earlyWarnings');
+Route::get('/earlywarnings',  'workorder_controller@earlywarnings');
 
 
 Route::get('/machinetime', function () {
